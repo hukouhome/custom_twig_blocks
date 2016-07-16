@@ -1,0 +1,6 @@
+name: Custom Twig Block Sample
+type: module
+description: "Provides a sample for getting View and regular block output into Twig variables."
+version: '8.x-1.0'
+core: '8.x'
+project: 'custom_twig_blocks'

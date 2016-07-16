@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\custom_twig_blocks\MySiteNodeType;
+use Drupal\custom_twig_blocks\MySiteSection;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function yourtheme_preprocess_page(&$variables) {
+
+  (new MySiteSection($variables))->preprocessPage();
+
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function yourtheme_preprocess_node(&$variables) {
+  $variables['tabs'] =  menu_local_tabs();
+
+  (new MySiteNodeType($variables))->preprocessNode();
+}
